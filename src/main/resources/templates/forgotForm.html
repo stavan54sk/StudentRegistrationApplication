@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentApplication|Registration Page</title>
+</head>
+<body>
+</br>
+<h1>
+    <p align="center">Please select your Security Question...('_')</p>
+</h1>
+</br>
+</br>
+<form action="/forgot" method="post">
+    <table align="center" border="1">
+        <tr>
+            <td>Username:</td>
+            <td><input name="username" required type="text"/></td>
+        </tr>
+        <tr>
+            <td>Security Question:</td>
+            <td><select name="securityQuestion" required>
+                <option value="favouritecolour">Favourite Colour?</option>
+                <option value="favouritehobby">Favourite Hobby?</option>
+                <option value="favouritesubject">Favourite Subject?</option>
+                <option value="favouritebike">Favourite Bike?</option>
+                <option value="favouritebike">Favourite Car?</option>
+                <option value="favouritecelebrity">Favourite Celebrity?</option>
+                <option value=""></option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Security Answer:</td>
+            <td><input name="securityAnswer" required type="text"/></td>
+        </tr>
+    </table>
+    <p align="center">
+        <input size type="submit" value="Send"></input>
+        </br>
+        <br>
+        <a href="/welcome">Back</a>
+    </p>
+</form>
+</body>
+</html>

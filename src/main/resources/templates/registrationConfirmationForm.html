@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentApplication|Registration Confirmation Page</title>
+</head>
+<body>
+</br>
+<h1>
+    <p align="center">Please verify your submitted details in Student Application...('_')</p>
+</h1>
+</br>
+</br>
+<table align="center" border="1">
+    <tr>
+        <td>Username:</td>
+        <td th:text="${student.username}"></td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td th:text="${student.password}"></td>
+    </tr>
+    <tr>
+        <td>Security Question:</td>
+        <td th:text="${student.securityquestion}"></td>
+    </tr>
+    <tr>
+        <td>Security Answer:</td>
+        <td th:text="${student.securityanswer}"></td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td th:text="${student.email}"></td>
+    </tr>
+    <tr>
+        <td>Phone:</td>
+        <td th:text="${student.phone}"></td>
+    </tr>
+</table>
+<p align="center">
+    </br>
+    <br>
+    <a href="/login">Sign-In</a>
+</p>
+</body>
+</html>

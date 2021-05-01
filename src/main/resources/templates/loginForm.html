@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentApplication|Login Page</title>
+</head>
+<body>
+</br>
+<h1>
+    <p align="center">Please login to Student Application...('_')</p>
+</h1>
+</br>
+</br>
+<form method="post" th:action="@{/login}">
+    <table align="center" border="1">
+        <tr>
+            <td>Username:</td>
+            <td><input required th:name="username" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input required th:name="password" type="password"/></td>
+        </tr>
+    </table>
+    <p align="center">
+        <input type="submit" value="Sign-In"></input>
+        </br>
+        <br>
+        <a href="/forgot">Forgot-Password</a>
+        </br>
+        <br>
+        <a href="/welcome">Back</a>
+    </p>
+</form>
+</body>
+</html>

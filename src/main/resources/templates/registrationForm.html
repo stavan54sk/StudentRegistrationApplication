@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentApplication|Registration Page</title>
+</head>
+<body>
+</br>
+<h1>
+    <p align="center">Please register to Student Application...('_')</p>
+</h1>
+</br>
+</br>
+<form method="post" th:action="@{/register}" th:object="${student}">
+    <table align="center" border="1">
+        <tr>
+            <td>Username:</td>
+            <td><input required th:field="*{username}" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input required th:field="*{password}" type="password"/></td>
+        </tr>
+        <tr>
+            <td>Security Question:</td>
+            <td><select name="securityquestion" required th:field="*{securityquestion}">
+                <option th:value="'Favourite Colour?'">Favourite Colour?</option>
+                <option th:value="'Favourite Hobby?'">Favourite Hobby?</option>
+                <option th:value="'Favourite Subject?'">Favourite Subject?</option>
+                <option th:value="'Favourite Bike?'">Favourite Bike?</option>
+                <option th:value="'Favourite Car?'">Favourite Car?</option>
+                <option th:value="'Favourite Celebrity?'">Favourite Celebrity?</option>
+                <option value=""></option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Security Answer:</td>
+            <td><input required th:field="*{securityanswer}" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input name="email" required th:field="*{email}" type="email"/></td>
+        </tr>
+        <tr>
+            <td>Phone:</td>
+            <td><input name="phone" required th:field="*{phone}" type="phone"/></td>
+        </tr>
+    </table>
+    <p align="center">
+        <input size type="submit" value="Register"></input>
+        </br>
+        <br>
+        <a href="/welcome">Back</a>
+    </p>
+</form>
+</body>
+</html>

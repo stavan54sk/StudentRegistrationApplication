@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentApplication|Student Registration Details</title>
+</head>
+<body>
+</br>
+<h1>
+    <p align="center">Please verify your submitted details in Student Application...('_')</p>
+</h1>
+</br>
+</br>
+<table align="center" border="1">
+    <tr>
+        <th>Sr#:</th>
+        <th>Username:</th>
+        <th>Deletion:</th>
+
+    </tr>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.id}"></td>
+        <td><a th:href="@{'/display/' + ${student.id}}" th:text="${student.username}"> </a></td>
+        <td><a th:href="@{'/delete/' + ${student.id}}">Delete</a></td>
+    </tr>
+</table>
+<p align="center">
+    </br>
+    <br>
+    <a href="/welcome">Back</a>
+</p>
+</body>
+</html>
